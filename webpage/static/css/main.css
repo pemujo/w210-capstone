@@ -272,6 +272,7 @@ input, select, textarea {
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 			padding-bottom: 1em;
+			text-align: center;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 		}
 
@@ -2448,9 +2449,11 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
-			width: 100%;
+			margin: 1em 0 2em 0;
+			width: 80%;
 		}
+
+
 
 			.image.fit img {
 				width: 100%;
