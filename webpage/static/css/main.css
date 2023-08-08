@@ -3806,6 +3806,14 @@ input, select, textarea {
 				-ms-flex: 1;
 			}
 
+			.wrapper.spotlight .roundimage {
+				border-radius: 50%;
+				margin: 0 3em 2em 1em;
+				width: 80%;
+				overflow: hidden;
+				-ms-flex: 1;
+			}
+
 			.wrapper.spotlight .video {
 				border-radius: 0%;
 				margin: 0 3em 2em 0;
@@ -3816,6 +3824,11 @@ input, select, textarea {
 
 				.wrapper.spotlight .image img {
 					border-radius: 5%;
+					width: 80%;
+				}
+
+				.wrapper.spotlight .roundimage roundimg {
+					border-radius: 50%;
 					width: 100%;
 				}
 
