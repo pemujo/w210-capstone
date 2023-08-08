@@ -18,7 +18,8 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	margin: 0;
+	margin: auto;
+
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -2437,6 +2438,8 @@ input, select, textarea {
 			top: 0.25em;
 		}
 
+
+
 		.image.right {
 			float: right;
 			padding: 0 0 1em 1.5em;
@@ -3806,10 +3809,19 @@ input, select, textarea {
 				-ms-flex: 1;
 			}
 
+			.wrapper.spotlight .image_gif {
+				border-radius: 0%;
+				margin: auto;
+				width: 40%;
+				overflow: hidden;
+				-ms-flex: 1;
+
+			}
+
 			.wrapper.spotlight .roundimage {
 				border-radius: 50%;
 				margin: 0 3em 2em 1em;
-				width: 80%;
+				width: 50%;
 				overflow: hidden;
 				-ms-flex: 1;
 			}
@@ -3822,14 +3834,27 @@ input, select, textarea {
 				-ms-flex: 1;
 			}
 
+			.wrapper .video_wide {
+				border-radius: 0%;
+				margin: 0 3em 2em 0;
+				width: 100%;
+				overflow: hidden;
+				-ms-flex: 1;
+			}
+
 				.wrapper.spotlight .image img {
 					border-radius: 5%;
 					width: 80%;
 				}
 
+				.wrapper.spotlight .image_gif img_gif {
+					border-radius: 0%;
+					width: 40%;
+
+				}
 				.wrapper.spotlight .roundimage roundimg {
 					border-radius: 50%;
-					width: 100%;
+					width: 50%;
 				}
 
 			.wrapper.spotlight .content {
