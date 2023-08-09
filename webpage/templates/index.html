@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
     <noscript>
         <link rel="stylesheet" href="{{url_for('static', filename='css/noscript.css')}}"/>
     </noscript>
@@ -434,7 +434,7 @@
  vegaEmbed('#baseline_models_results', baseline_models_results).then(function(result) {
   }).catch(console.error);
 
-contrail_ratio_vs_meanIOU
+
 
  var overall_models_meanIOU_results = src='static/altair_json_files/Overall_models_meanIOU_results.json';
  vegaEmbed('#overall_models_meanIOU_results', overall_models_meanIOU_results).then(function(result) {
