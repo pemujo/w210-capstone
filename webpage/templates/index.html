@@ -10,6 +10,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
     <noscript>
         <link rel="stylesheet" href="{{url_for('static', filename='css/noscript.css')}}"/>
     </noscript>
@@ -232,6 +237,40 @@
         </section>
 
 
+        <section id="Results" class="wrapper spotlight style3">
+
+            <div class="inner">
+
+                <div class="content">
+                    <h2 class="major">Results</h2>
+                    <p>We Used UNet, Resnet101 and DeeplabV3 as baseline models, and a hybrid TransUnet using the
+                        original UNet architecture but with an additional Transformer Cycle</p>
+
+                </div>
+
+            </div>
+            <div class="inner">
+<!--                <section class="features">-->
+
+                    <div id="viz-container">
+                        <div class="viz-container-title">
+
+                            <div class="visualization" id="train_curves"></div>
+                        </div>
+                        <div class="viz-container-title">
+                            <div class="visualization" id="overall_models_meanIOU_results"></div>
+                        </div>
+                    </div>
+                    <!--                    <img class="image" src="static/img/input_features.webp" alt=""/>-->
+                    <!--                    <p>Here is an example of a plot of one-single time step of an image (note there are 8 timesteps in-->
+                    <!--                        the dataset):</p>-->
+                    <!--                    <img class="image" src="static/img/recordsampleimage.webp" alt=""/>-->
+                    <!--                    <p>Here is an example of contrails under one record moving and changing in shape over time:</p>-->
+                    <!--                    <img class="image_gif" src="static/img/animation.gif" alt=""/>-->
+<!--                </section>-->
+            </div>
+        </section>
+
         <section id="demo" class="wrapper alt style1">
             <div class="inner">
 
@@ -348,6 +387,23 @@
 <script src="static/js/breakpoints.min.js"></script>
 <script src="static/js/util.js"></script>
 <script src="static/js/main.js"></script>
+
+<script type="text/javascript">
+ var train_curves = src='static/altair_json_files/train_curves.json';
+ vegaEmbed('#train_curves', train_curves).then(function(result) {
+  }).catch(console.error);
+
+ var overall_models_meanIOU_results = src='static/altair_json_files/Overall_models_meanIOU_results.json';
+ vegaEmbed('#overall_models_meanIOU_results', overall_models_meanIOU_results).then(function(result) {
+  }).catch(console.error);
+
+
+  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+  vegaEmbed('#vis', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+</script>
 
 </body>
 </html>

@@ -3410,7 +3410,7 @@ input, select, textarea {
 				border: solid 2px rgba(255, 255, 255, 0.125);
 				cursor: default;
 				display: inline-block;
-				font-size: 2em;
+				font-size: 10em;
 				height: 2.25em;
 				line-height: 2.25em;
 				text-align: center;
@@ -3471,7 +3471,7 @@ input, select, textarea {
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #2e3141;
+
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 				background-size: auto,
  cover;
@@ -3487,6 +3487,7 @@ input, select, textarea {
 			#banner {
 				padding: 12em 3em 12.375em 3em ;
 				margin-bottom: -4.75em;
+				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
 
 			}
 
@@ -4055,6 +4056,27 @@ input, select, textarea {
 
 		}
 
+.viz-container {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+
+
+}
+.viz-container-title {
+
+  margin: auto;
+  width: 100%;
+
+
+}
+.visualization {
+
+  margin: auto;
+
+
+
+}
 /* Footer */
 
 	#footer .inner {
