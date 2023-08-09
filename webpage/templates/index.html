@@ -250,24 +250,57 @@
 
             </div>
             <div class="inner">
-<!--                <section class="features">-->
+                <!--                <section class="features">-->
 
-                    <div id="viz-container">
-                        <div class="viz-container-title">
+                <div id="viz-container">
+                    <div class="viz-container-title">
 
-                            <div class="visualization" id="train_curves"></div>
-                        </div>
-                        <div class="viz-container-title">
-                            <div class="visualization" id="overall_models_meanIOU_results"></div>
-                        </div>
+                        <div class="visualization" id="train_curves"></div>
                     </div>
-                    <!--                    <img class="image" src="static/img/input_features.webp" alt=""/>-->
-                    <!--                    <p>Here is an example of a plot of one-single time step of an image (note there are 8 timesteps in-->
-                    <!--                        the dataset):</p>-->
-                    <!--                    <img class="image" src="static/img/recordsampleimage.webp" alt=""/>-->
-                    <!--                    <p>Here is an example of contrails under one record moving and changing in shape over time:</p>-->
-                    <!--                    <img class="image_gif" src="static/img/animation.gif" alt=""/>-->
-<!--                </section>-->
+
+                    <div class="viz-container-title">
+
+                        <div class="visualization" id="baseline_models_results"></div>
+                    </div>
+                    <div>
+                        <h3 class="major">MVP vs Basline Model metrics summary</h3>
+                        <table>
+                            <tr>
+                                <th>Model</th>
+                                <th>Validation Mean IoU</th>
+                                <th>Validation Dice Coefficient</th>
+                                <th>False Positive Ratio</th>
+                                <th>False Negative Ratio</th>
+                            </tr>
+                            <tr>
+                                <td>MVP - TransUNet</td>
+                                <td>0.6997</td>
+                                <td>0.7718</td>
+                                <td>0.0988</td>
+                                <td>0.1653</td>
+                            </tr>
+                            <tr>
+                                <td>Baseline - UNet</td>
+                                <td>0.6951</td>
+                                <td>0.7642</td>
+                                <td>0.1550</td>
+                                <td>0.1422</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="viz-container-title">
+                        <div class="visualization" id="overall_models_meanIOU_results"></div>
+                    </div>
+
+
+                </div>
+                <!--                    <img class="image" src="static/img/input_features.webp" alt=""/>-->
+                <!--                    <p>Here is an example of a plot of one-single time step of an image (note there are 8 timesteps in-->
+                <!--                        the dataset):</p>-->
+                <!--                    <img class="image" src="static/img/recordsampleimage.webp" alt=""/>-->
+                <!--                    <p>Here is an example of contrails under one record moving and changing in shape over time:</p>-->
+                <!--                    <img class="image_gif" src="static/img/animation.gif" alt=""/>-->
+                <!--                </section>-->
             </div>
         </section>
 
@@ -393,6 +426,12 @@
  vegaEmbed('#train_curves', train_curves).then(function(result) {
   }).catch(console.error);
 
+   var baseline_models_results = src='static/altair_json_files/baseline_models_results.json';
+ vegaEmbed('#baseline_models_results', baseline_models_results).then(function(result) {
+  }).catch(console.error);
+
+
+
  var overall_models_meanIOU_results = src='static/altair_json_files/Overall_models_meanIOU_results.json';
  vegaEmbed('#overall_models_meanIOU_results', overall_models_meanIOU_results).then(function(result) {
   }).catch(console.error);
@@ -402,6 +441,8 @@
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+
+
 
 </script>
 
