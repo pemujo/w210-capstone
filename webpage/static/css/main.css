@@ -2089,7 +2089,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section.special, article.special {
-		text-align: center;
+		text-align: justify;
 	}
 
 /* Form */
@@ -2307,7 +2307,7 @@ input, select, textarea {
 				left: 0;
 				line-height: 2.0625em;
 				position: absolute;
-				text-align: center;
+				text-align: justify;
 				top: 0;
 				width: 2.0625em;
 			}
@@ -2612,7 +2612,7 @@ input, select, textarea {
 					-ms-flex-shrink: 1;
 					flex-shrink: 1;
 					padding: 1em 0 0 0;
-					text-align: center;
+					text-align: justify;
 					width: 100%;
 				}
 
@@ -2699,7 +2699,7 @@ input, select, textarea {
 				left: 0;
 				line-height: 2.35em;
 				position: absolute;
-				text-align: center;
+				text-align: justify;
 				top: 0;
 				width: 2.5em;
 			}
@@ -2743,7 +2743,7 @@ input, select, textarea {
 				margin: 0 0.125em;
 				min-width: 1.5em;
 				padding: 0 0.5em;
-				text-align: center;
+				text-align: justify;
 			}
 
 				ul.pagination li > .page:hover {
@@ -2883,7 +2883,7 @@ input, select, textarea {
 		letter-spacing: 0.1em;
 		line-height: 3.75em;
 		padding: 0 2.25em;
-		text-align: center;
+		text-align: justify;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
@@ -3313,7 +3313,7 @@ input, select, textarea {
 			overflow: hidden;
 			position: absolute;
 			right: 0;
-			text-align: center;
+			text-align: justify;
 			text-indent: 4em;
 			top: 0;
 			width: 4em;
@@ -3692,6 +3692,7 @@ input, select, textarea {
 			padding: 3em 0 1em 0 ;
 			margin: 0 auto;
 			width: 55em;
+			text-align: justify;
 		}
 
 		.wrapper.style2 {
@@ -3864,6 +3865,7 @@ input, select, textarea {
 			.wrapper.spotlight .content {
 				width: 100%;
 				-ms-flex: 2;
+				text-align: justify;
 			}
 
 			.wrapper.spotlight:nth-child(2n - 1) .inner {
@@ -3871,7 +3873,7 @@ input, select, textarea {
 				-webkit-flex-direction: row-reverse;
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
-				text-align: right;
+				text-align: justify;
 			}
 
 			.wrapper.spotlight:nth-child(2n - 1) .image {
@@ -4058,7 +4060,7 @@ input, select, textarea {
 
 .viz-container {
   margin: auto;
-  text-align: center;
+  text-align: justify;
   width: 100%;
 
 
