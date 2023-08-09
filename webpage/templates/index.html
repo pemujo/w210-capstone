@@ -292,6 +292,10 @@
                         <div class="visualization" id="overall_models_meanIOU_results"></div>
                     </div>
 
+                    <div class="viz-container-title">
+                        <div class="visualization" id="contrail_ratio_vs_meanIOU"></div>
+                    </div>
+
 
                 </div>
                 <!--                    <img class="image" src="static/img/input_features.webp" alt=""/>-->
@@ -430,16 +434,14 @@
  vegaEmbed('#baseline_models_results', baseline_models_results).then(function(result) {
   }).catch(console.error);
 
-
+contrail_ratio_vs_meanIOU
 
  var overall_models_meanIOU_results = src='static/altair_json_files/Overall_models_meanIOU_results.json';
  vegaEmbed('#overall_models_meanIOU_results', overall_models_meanIOU_results).then(function(result) {
   }).catch(console.error);
 
-
-  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
-  vegaEmbed('#vis', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+var contrail_ratio_vs_meanIOU = src='static/altair_json_files/contrail_ratio_vs_meanIOU.json';
+ vegaEmbed('#contrail_ratio_vs_meanIOU', contrail_ratio_vs_meanIOU).then(function(result) {
   }).catch(console.error);
 
 
